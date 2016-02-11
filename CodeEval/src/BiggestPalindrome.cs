@@ -1,9 +1,10 @@
 using System;
 using System.Linq;
+using System.IO;
 
 namespace CodeEvalSolutions
 {
-    public class Program
+    public class BiggestPalindrome
     {
         private static bool IsPrime(int number)
         {
@@ -41,7 +42,7 @@ namespace CodeEvalSolutions
             return str == reversed;
         }
 
-        private static int BiggestPalindrome(int min, int max)
+        private static int BiggestPalin(int min, int max)
         {
 
             for (var i = max; max >= min; i -= 1) {
@@ -55,7 +56,7 @@ namespace CodeEvalSolutions
 
         public static void Main(string[] args)
         {
-            Console.WriteLine(BiggestPalindrome(1, 1000));
+            Console.WriteLine(BiggestPalin(1, 1000));
         }
     }
 }
